@@ -27,7 +27,7 @@ Si votre Jeedom n'est pas accessible de l'extérieur  l'association de Jeedom au
 **IMPORTANT** Il faut faire toute la procédure de connexion en étant connecté à votre Jeedom par l'adresse externe en http://.... si vous la faites en etant connecté par l'adresse interne en 192.168.x.y, vous aurez bien les dialogues du serveur Home Coonnect
 vous demandant de vous identifier et le dialogue vous demandant de confirmer, mais au retour dans sotre Jeedom vous obtiendrez un message d'erreur.
 
-Vérifiez aussi que que dans Configuration -> API il y a bien une **Clé API Home Connect** et que l'accès API de cette clé est sur **Activé**.
+Vérifiez aussi que que dans Configuration -> API il y a bien une **Clé API Home Connect**et que l'accès API de cette clé est sur**Activé**.
 
 Lors des tests, il semble que le serveur d'authentification Home Connect demande que l'adresse externe de Jeedom soit en https et pas http, le moyen le plus simple est d'utiliser les DNS de Jeedom.
 

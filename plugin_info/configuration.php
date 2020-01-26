@@ -47,7 +47,7 @@ if (!isConnect()) {
 				</sup>
 			</label>
 			<div class="col-lg-9">
-				<span><?php echo network::getNetworkAccess('external','proto:dns') . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');?></span>
+				<span><?php echo network::getNetworkAccess('external') . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');?></span>
 			</div>
 		</div>
 		<div class="form-group">
@@ -76,6 +76,17 @@ if (!isConnect()) {
 			<label class="col-sm-3 control-label">{{Mode démo (appareils simulés)}}</label>
 			<div class="col-sm-2">
 				<input type="checkbox" class="configKey tooltips" data-l1key="demo_mode">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">
+				{{Client ID pour le mode démo}}
+				<sup>
+					<i class="fa fa-question-circle tooltips" title="{{Récupérez ce paramètre sur le site Home Connect (https://developer.home-connect.com/applications) dans le carré API Web Client}}" style="font-size : 1em;color:grey;"></i>
+				</sup>
+			</label>
+			<div class="col-sm-3">
+				<input type="text" class="configKey form-control" data-l1key="demo_client_id"/>
 			</div>
 		</div>
 		<?php
