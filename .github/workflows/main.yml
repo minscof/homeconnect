@@ -1,16 +1,21 @@
-name: CI
+name: Sync Fork
 
-on: [push]
+on:
+  schedule:
+  - cron: '*/30 * * * *'
 
 jobs:
-  build:
+  sync:
 
     runs-on: ubuntu-latest
-
+    
     steps:
-    - uses: actions/checkout@v2
-    - name: Fork Sync
-      uses: TG908/fork-sync@v1.1.4
+    - uses: TG908/fork-sync@v1.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        owner: jmvedrine
+        base: beta
+        head: beta
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
